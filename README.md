@@ -52,23 +52,6 @@ CulturePunk is the world’s most collaborative and dynamic marketplace for art 
 
 By honoring our collective lived experiences in a virtual world, we re-imagine an art space that operates to serve and see everyone. *We are artists. We are you.*
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-### Built With
-
-* [React.js](https://reactjs.org/)
-* [Vite](https://vitejs.dev/)
-* [Firebase](https://firebase.google.com/)
-* [Express.js](https://expressjs.com/)
-* [Node](https://nodejs.org/en/)
-* [Material UI](https://mui.com/)
-* [Three JS](https://threejs.org/)
-* [AWS](https://aws.amazon.com/)
-* [React Router](https://reactrouter.com/)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -121,7 +104,6 @@ The page is divided into four sections and includes:
 </p>
 
 ### Events Calendar
-
 Events Calendar section displays a calendar list of product drops and auctions. Users can add and delete events. Product drops and auctions are retrieved from a PostgreSQL database.
 
 * The event carousel elegantly displays 3D dynamic cards for each product drop and auction drop. A toggle switch opens and closes the event carousel
@@ -129,13 +111,13 @@ Events Calendar section displays a calendar list of product drops and auctions. 
 * The event calendar has CRUD functionality and is connected to a PostgreSQL database
 * The event calendar can also be connected to a Firebase real time database for better integration and communication with other components that use Firebase.
 
-![events.gif][events]
-
 ### Livestream
-
 The livestream player seen here and on the home page is using AWS IVS Player. The channel is configured to use ultra-low latency and can be configured to save playbacks to an S3 bucket. It is also configured that anyone with access to the stream key can stream from their local machine. The streamUrl in the Player component can be replaced with any AWS IVS Player link.
 
-![Livestream](/images/livestream.png)
+### Gallery
+In the NFT Art Gallery users can browse through selected works sourced from the OpenSea API. The work can be ordered by Last Sale, Token ID, or Number of Sales.
+
+The page uses React Context to allow logged-in users to save their favorite pieces. When a user selects the favorite icon on an NFT card, identifying information for the art is stored in a Firebase database under their username. When the component renders, the token ID's pulled from OpenSea are checked agains the token IDs saved for the user in Firebase in order to determine which cards will appear with an active favorite icon.
 
 ### Chat & Auction
 Chat and Auction section uses React Hooks and React Context to allow logged-in users to chat real-time and join the live auction. The UI design is implemented using Material UI. Live chat content and auction information are stored and retrieved using Google Firebase real-time database to ensure data persistence.
@@ -143,54 +125,39 @@ Chat and Auction section uses React Hooks and React Context to allow logged-in u
 * Users can input chat content along with Emoji into the Live Chat section.
 * Live auction system has CRUD functionalities and is displayed in a sorted descending order based on the bidding price.
 
-![ChatBid.Gif][chatbid]
-
-### Gallery
-
-In the NFT Art Gallery users can browse through selected works sourced from the OpenSea API. The work can be ordered by Last Sale, Token ID, or Number of Sales.
-
-The page uses React Context to allow logged-in users to save their favorite pieces. When a user selects the favorite icon on an NFT card, identifying information for the art is stored in a Firebase database under their username. When the component renders, the token ID's pulled from OpenSea are checked agains the token IDs saved for the user in Firebase in order to determine which cards will appear with an active favorite icon.
-
-![GalleryGif](/images/Gallery.gif)
-
-### Login
-
-
 ### Profile
 The Profile page uses React Context to display information for the select user, including social media links, events, and statistics. Users who list themselves as a Creator can display a Gallery of their work in a carousel, those with the Connoisseur descriptor show a Collection of purchased work, and users described as both display both.
 
 Using CSS 3D, scrolling down causes the user's information to float backward as the art moves into view.
-
-![Profile](images/Profile.gif)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- CONTRIBUTORS -->
 ## Contributors
 
-* [Caitlin Kinney](https://github.com/thecaitlinkinney) -
+* [Caitlin Kinney](https://github.com/thecaitlinkinney)
   * Product Manager
   * NFT Art Gallery
-* [Cora Durham](https://www.linkedin.com/in/cora-durham/) -
+* [Cora Durham](https://www.linkedin.com/in/cora-durham/)
   * Architecture Owner
   * Livestream
-* [Bishal Gautam]() -
-  * UI Design Lead
+* [Bishal Gautam](https://www.linkedin.com/in/bishalkgautam/)
+  * UI Design Lead & Software Engineer
   * Homepage
-* [Caleb Kim]() -
+* [Caleb Kim](https://www.linkedin.com/in/caleb-kim0510/)
   * Live Chat
   * Auction
-* [Ryan Rhoads]() -
+* [Ryan Rhoads](https://www.linkedin.com/in/ryangrantrhoads/)
   * Homepage
   * Carousel Widget Integration
-* [Nan Jiang]() -
+* [Nan Jiang](https://www.linkedin.com/in/dorajiang/)
   * User Login
-* [John Fa](https://www.linkedin.com/in/johnfa/) -
+* [John Fa](https://www.linkedin.com/in/johnfa/)
   * Events Calendar
-* [Iris Huang]() -
+* [Iris Huang](https://www.linkedin.com/in/iris-yilu-huang/)
   * Live Chat
   * Auction
-* [Derek Samms](https://www.linkedin.com/in/derek-samms/) - Derek.Samms@gmail.com
+* [Derek Samms](https://www.linkedin.com/in/derek-samms/)
   * User Profile
 
 
@@ -202,8 +169,6 @@ Project Link: [https://github.com/hr-rfp55-venusaur/CulturePunk](https://github.
 ## Acknowledgments
 
 * [Paloma Rincón](https://palomarincon.com/)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
